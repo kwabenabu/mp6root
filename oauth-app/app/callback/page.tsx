@@ -23,9 +23,10 @@ type GitHubUser = {
 export default async function CallbackPage({
   searchParams,
 }: {
-  searchParams: SearchParams;
+  searchParams: Promise<SearchParams>;
 }) {
-  const codeParam = searchParams.code;
+  const params = await searchParams;
+  const codeParam = params.code;
   const code = Array.isArray(codeParam) ? codeParam[0] : codeParam;
 
   if (!code) {
