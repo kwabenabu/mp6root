@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import { getAccessToken } from "@/lib/getAccessToken";
 import { getUserInfo } from "@/lib/getUserInfo";
 
+export const dynamic = "force-dynamic";
+
 type SearchParams = Record<string, string | string[] | undefined>;
 
 type GitHubUser = {
