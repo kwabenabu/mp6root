@@ -53,34 +53,34 @@ export default async function CallbackPage({
   if (!user || errorMessage) {
     return (
       <ErrorBox
-        message={errorMessage ?? "Unable to load your GitHub profile."}
+        message={errorMessage ?? "Unable to load your kwabena profile."}
         detail={errorDetail}
       />
     );
   }
 
   return (
-    <section className="mx-auto flex max-w-2xl flex-col gap-6 rounded-2xl bg-white p-10 shadow-sm">
+    <section className="mx-auto flex max-w-2xl flex-col gap-6 rounded-2xl bg-white p-10 shadow-sm kwabena-border">
       <header className="flex items-center gap-4">
         <Image
           src={user.avatar_url}
           alt={`${user.login} avatar`}
           width={64}
           height={64}
-          className="h-16 w-16 rounded-full border border-slate-200 object-cover"
+          className="h-16 w-16 rounded-full border border-blue-200 object-cover"
         />
         <div>
-          <p className="text-sm uppercase tracking-wide text-slate-500">
-            Signed in with GitHub
+          <p className="text-sm uppercase tracking-wide text-blue-700">
+            Signed in with kwabena
           </p>
-          <h1 className="text-2xl font-bold text-slate-900">
+          <h1 className="text-2xl font-bold text-blue-900">
             {user.name ?? user.login}
           </h1>
-          <p className="text-slate-600">@{user.login}</p>
+          <p className="text-blue-600">@{user.login}</p>
         </div>
       </header>
 
-      <div className="grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
+      <div className="grid gap-3 text-sm text-blue-700 sm:grid-cols-2">
         <InfoRow label="Public repos" value={user.public_repos} />
         <InfoRow label="Followers" value={user.followers} />
         <InfoRow label="Following" value={user.following} />
@@ -91,7 +91,7 @@ export default async function CallbackPage({
           value={
             <a
               href={user.html_url}
-              className="text-slate-900 underline"
+              className="text-blue-900 underline"
               target="_blank"
               rel="noreferrer"
             >
@@ -101,10 +101,10 @@ export default async function CallbackPage({
         />
       </div>
 
-      <div className="rounded-lg bg-slate-50 p-4 text-xs text-slate-600">
+      <div className="rounded-lg bg-blue-50 p-4 text-xs text-blue-600">
         <p>
           Data is fetched server-side during the callback using the GitHub access token. No session
-          is stored; refresh to sign in again.
+          is stored; refresh to sign in again. Powered by kwabena.
         </p>
       </div>
     </section>

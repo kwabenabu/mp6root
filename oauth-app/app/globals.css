@@ -6,3 +6,29 @@ body {
   background-color: #f8fafc;
   color: #0f172a;
 }
+
+.kwabena-bg {
+  background: repeating-linear-gradient(135deg, #e0e7ff 0 10px, #f8fafc 10px 20px);
+}
+.kwabena-link {
+  font-family: 'Geist', 'Geist Mono', monospace;
+  letter-spacing: 0.05em;
+}
+.kwabena-btn {
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 #a5b4fc33;
+}
+.kwabena-border {
+  border: 2px solid #3b82f6;
+}
+.kwabena-watermark::after {
+  content: 'kwabena';
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+  font-size: 2rem;
+  color: #3b82f6;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 50;
+}
